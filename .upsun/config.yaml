@@ -125,7 +125,7 @@ applications:
 # to power your Upsun (Staging) project.
 # More information: https://docs.upsun.com/add-services.html
 # Full list of available services: https://docs.upsun.com/add-services.html#available-services
-services:
+#services:
   # db:
   #     type: postgresql:14
   
