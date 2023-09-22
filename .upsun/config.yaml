@@ -26,7 +26,9 @@ applications:
        "/livebook": # Represents the path in the app.
          source: "local" # "local" sources are unique to the app, while "service" sources can be shared among apps.
          source_path: "livebook" # The subdirectory within the mounted disk (the source) where the mount should point.
-
+       #"_build/prod/rel/livebook/releases/":
+       #  source: "local" # "local" sources are unique to the app, while "service" sources can be shared among apps.
+       #  source_path: "releases" # The subdirectory within the mounted disk (the source) where the mount should point.
     # The web key configures the web server running in front of your app.
     # More information: https://docs.upsun.com/create-apps/app-reference.html#web
     web:
@@ -88,7 +90,7 @@ applications:
       # The build hook is run after any build flavor.
       # More information: https://docs.upsun.com/create-apps/hooks/hooks-comparison.html#build-hook
       build: |
-        mix deps.get
+        MIX_ENV=prod mix deps.get
         MIX_ENV=prod mix release
         
       # The deploy hook is run after the app container has been started, but before it has started accepting requests.
