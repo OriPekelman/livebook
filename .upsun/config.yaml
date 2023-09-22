@@ -26,9 +26,9 @@ applications:
        "/livebook": # Represents the path in the app.
          source: "local" # "local" sources are unique to the app, while "service" sources can be shared among apps.
          source_path: "livebook" # The subdirectory within the mounted disk (the source) where the mount should point.
-       #"_build/prod/rel/livebook/releases/":
-       #  source: "local" # "local" sources are unique to the app, while "service" sources can be shared among apps.
-       #  source_path: "releases" # The subdirectory within the mounted disk (the source) where the mount should point.
+       "_build/prod/rel/livebook/releases/":
+         source: "local" # "local" sources are unique to the app, while "service" sources can be shared among apps.
+         source_path: "releases" # The subdirectory within the mounted disk (the source) where the mount should point.
     # The web key configures the web server running in front of your app.
     # More information: https://docs.upsun.com/create-apps/app-reference.html#web
     web:
