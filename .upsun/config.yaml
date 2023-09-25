@@ -76,7 +76,7 @@ applications:
     variables:
       env:
         LIVEBOOK_PORT: 8888
-        
+        LIVEBOOK_PASSWORD: "change_me_later"
 
     # Outbound firewall rules for the application. More information: https://docs.upsun.com/create-apps/app-reference.html#firewall
     # firewall:
@@ -98,7 +98,7 @@ applications:
       # More information: https://docs.upsun.com/create-apps/hooks/hooks-comparison.html#build-hook
       build: |
         MIX_ENV=prod mix deps.get
-        LIVEBOOK_APPS_PATH_PASSWORD="change_me_later" MIX_ENV=prod mix release
+        MIX_ENV=prod mix release
         ln -s /tmp/COOKIE _build/prod/rel/livebook/releases/COOKIE
         
       # The deploy hook is run after the app container has been started, but before it has started accepting requests.
