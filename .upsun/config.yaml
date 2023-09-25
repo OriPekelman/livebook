@@ -70,6 +70,7 @@ applications:
     variables:
       env:
         LIVEBOOK_PORT: 8888
+        LIVEBOOK_APPS_PATH_PASSWORD: "change_me_later"
         
 
     # Outbound firewall rules for the application. More information: https://docs.upsun.com/create-apps/app-reference.html#firewall
