@@ -145,6 +145,6 @@ routes:
     to: "https://{default}/"
   "https://{default}/live/websocket":
     type: upstream
-    upstream: "app:http"
+    upstream: "livebook:http"
     cache:
       enabled: false
